@@ -1,0 +1,19 @@
+Install jdk1.7
+wget command to install jdk1.7
+wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.rpm" -O jdk-7u79-linux-x64.rpm
+rpm -Uvh jdk-7u79-linux-x64.rpm
+or we can use yum install jdk-7u79-linux-x64.rpm
+
+if we already have java 1.8 or anyother version of JDK other than 1.7 we can have multiple versions of JDK.
+cd /usr/java 
+unlink latest (it will unlink exiting version of JDK)
+ln -s jdk1.7.0_79 latest
+
+If we have alternatives then we need to skip it.
+cd /usr/bin/
+unlink java
+ll -s /usr/java/default/bin/java java => created a softlink for default java which is jdk1.7
+java -version
+
+
+
