@@ -12,7 +12,7 @@ ln -s jdk1.7.0_79 latest
 If we have alternatives then we need to skip it.
 cd /usr/bin/
 unlink java
-ll -s /usr/java/default/bin/java java => created a softlink for default java which is jdk1.7
+ln -s /usr/java/default/bin/java java => created a softlink for default java which is jdk1.7
 java -version
 
 
